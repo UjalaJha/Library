@@ -6,7 +6,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Library</a>
+                <a class="navbar-brand" href="/Library/public/">Library</a>
             </div>
             <!-- /.navbar-header -->
 
