@@ -238,17 +238,9 @@
                             <a href="/"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-group"></i>Transaction Details<span class="fa arrow"></span></a>
-                                <ul class="nav nav-second-level">    
-                                        <li>
-                                            <a href="flot.html">Current Book Details</a>
-                                        </li>
-                                        <li>
-                                            <a href="morris.html">Previous Issue History</a>
-                                        </li>
-                                </ul>
-                            {{--  <ul class="nav nav-second-level">
-                                {{--  <li>
+                            <a href="#"><i class="fa fa-group"></i>Membership<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
                                     <a href="flot.html">Browse Members</a>
                                 </li>
                                 <li>
@@ -259,21 +251,25 @@
                                 </li>
                                 <li>
                                     <a href="morris.html">Import/Export Details</a>
-                                </li>  --}}
-                            <!-- /.nav-second-level --> 
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
                         </li>
                         <li>
                             <a href="tables.html"><i class="fa fa-book fa-fw"></i>Book Circulation<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="flot.html">Apply for Issue</a>
+                                    <a href="flot.html">Start Transaction</a>
                                 </li>
                                 <li>
-                                    <a href="morris.html">Apply for Reissue</a>
+                                    <a href="morris.html">Generate Transaction History</a>
+                                </li>
+                                <li>
+                                    <a href="morris.html">Generate Overdue List</a>
                                 </li>
                             </ul>
                         </li>
-                        {{--  <li>
+                        <li>
                             <a href="forms.html"><i class="fa fa-file fa-fw"></i>Book Details<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
@@ -298,7 +294,7 @@
                                 </li>
                                 
                             </ul>
-                        </li>  --}}
+                        </li>
                         <li>
                             <a href="#"><i class="fa fa-newspaper-o fa-fw"></i> Open Public Acess Catalogue <span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -313,13 +309,47 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="tables.html"><i class="fa fa-book fa-fw"></i>Reference</a>
+                            <a href="#"><i class="fa fa-print fa-fw"></i> Reports Generation <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#">Daily Report</a>
+                                </li>
+                                <li>
+                                    <a href="#">Monthly Report</a>
+                                </li>
+                                <li>
+                                    <a href="#">Yearly Report<span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                    </ul>
+                                    <!-- /.nav-third-level -->
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="tables.html"><i class="fa fa-question fa-fw"></i>FAQs</a>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="blank.blade.php">Blank Page</a>
+                                </li>
+                                <li>
+                                    <a href="login.blage.php">Login Page</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
                         </li>
-                        
-        
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
