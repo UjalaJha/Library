@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>VESIT LIBRARY</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -313,7 +313,29 @@
                         </li>
                         <li>
                             <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Book Details<span class="fa arrow"></span></a>
-                            
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="flot.html">Browse Books</a>
+                                </li>
+                                <li>
+                                    <a href="morris.html">Add/Delete Books</a>
+                                </li>
+
+                                <li>
+                                    <a href="morris.html">Generate Overdue List</a>
+                                </li>
+                                <li>
+                                    <a href="morris.html">Checked Out Book Details</a>
+                                </li>
+        
+                                <li>
+                                    <a href="flot.html">Generate Barcode</a>
+                                </li>
+                                <li>
+                                    <a href="morris.html">Generate Labels</a>
+                                </li>
+                                
+                            </ul>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-wrench fa-fw"></i> Open Public Acess Catalogue <span class="fa arrow"></span></a>
