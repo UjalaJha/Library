@@ -6,7 +6,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">Library</a>
+                <a class="navbar-brand" href="/"><img src="https://ves.ac.in/vesit/wp-content/uploads/sites/3/2015/11/logo.png" class="pull-left brand-font" height="25" width="25" >Library</a> 
             </div>
             <!-- /.navbar-header -->
 
