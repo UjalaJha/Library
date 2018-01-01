@@ -8,9 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>VESIT LIBRARY</title>
-    <link rel="icon" href="{!!('img/logo.ico') !!}"/>
+    <link rel="icon" href="{!!('img/logo.ico') !!}">
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
