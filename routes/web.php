@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.index');
+Route::get('/student', function () {
+    return view('pages.index_student');
 });
 Route::get('/admin', function () {
     return view('pages.index_admin');
