@@ -12,5 +12,5 @@
 */
 
 Route::get('/student', function () {
-    return view('pages.index');
+    return view('pages.index_student');
 });
