@@ -10,6 +10,7 @@
     <meta name="author" content="">
 
     <title>VESIT LIBRARY</title>
+    <link rel="icon" href="{!!('img/logo.ico') !!}"/>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">

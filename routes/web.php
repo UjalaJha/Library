@@ -14,6 +14,10 @@
 Route::get('/', function () {
     return view('pages.index');
 });
+Route::get('/admin', function () {
+    return view('pages.index_admin');
+});
+
 Route::get('/login', function () {
     return view('pages.login');
 });
