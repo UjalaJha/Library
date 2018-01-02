@@ -300,7 +300,7 @@
                             </ul>
                         </li>  --}}
                         <li>
-                            <a href="#"><i class="fa fa-newspaper-o fa-fw"></i> Open Public Acess Catalogue <span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-newspaper-o fa-fw"></i> Open Public Access Catalogue <span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="panels-wells.html">Degree</a>
