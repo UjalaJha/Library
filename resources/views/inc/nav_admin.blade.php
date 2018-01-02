@@ -277,7 +277,7 @@
                                     <a href="flot.html">Browse Books</a>
                                 </li>
                                 <li>
-                                    <a href="morris.html">Add/Delete Books</a>
+                                    <a href="/addbooks">Add/Delete Books</a>
                                 </li>
 
                                 <li>
