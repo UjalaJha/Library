@@ -38,7 +38,24 @@
 
 <body>
     @include('inc.nav_admin')
-
+    <div class="wrapper">
+        <div class="page-wrapper">
+            <div class="row">
+                <div class="col-md-3 col-md-6">
+                    {!! Form::open(['method'=>'POST']) !!}
+                    <div class="form-group push-to-right" style="right:5px">
+                        {{Form::label('title','Title')}}
+                        {{Form::text('title','',['class'=>'form-control','placeholder'=>'Title'])}}
+                        {{Form::label('author','Author')}}
+                        {{Form::text('author','',['class'=>'form-control','placeholder'=>'Author'])}}
+                        {{Form::label('price','Price')}}
+                        {{Form::text('price','',['class'=>'form-control','placeholder'=>'Price'])}}
+                    </div>
+                    {!! Form::close() !!}
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
