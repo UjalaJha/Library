@@ -36,7 +36,7 @@
 </head>
 
 <body>
-    @include('inc.nav_student')
+    @include('inc.nav_user')
 
         <!-- Navigation -->
     

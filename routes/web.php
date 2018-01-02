@@ -11,13 +11,16 @@
 |
 */
 
-Route::get('/student', function () {
-    return view('pages.index_student');
+Route::get('/user', function () {
+    return view('pages.user.index_user');
 });
 Route::get('/admin', function () {
-    return view('pages.index_admin');
+    return view('pages.admin.index_admin');
 });
 
 Route::get('/login', function () {
     return view('pages.login');
+});
+Route::get('/forms', function () {
+    return view('pages.forms');
 });

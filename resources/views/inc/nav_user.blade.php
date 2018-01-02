@@ -274,7 +274,7 @@
                             </ul>
                         </li>
                         {{--  <li>
-                            <a href="forms.html"><i class="fa fa-file fa-fw"></i>Book Details<span class="fa arrow"></span></a>
+                            <a href="forms.blade.php"><i class="fa fa-file fa-fw"></i>Book Details<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="flot.html">Browse Books</a>
