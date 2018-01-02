@@ -29,3 +29,5 @@ Route::get('/login', function () {
 Route::get('/forms', function () {
     return view('pages.forms');
 });
+//D:\xampp\htdocs\Library\resources\views\pages\admin\addmembers.blade.php
+Route::get('/addmem', 'MembersController@create');
