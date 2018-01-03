@@ -38,7 +38,7 @@
 
 <body>
     @include('inc.nav_admin')
-    <div class="wrapper">
+    <!-- <div class="wrapper">
         <div class="page-wrapper">
             <div class="row">
                 <div class="col-md-3 col-md-6">
@@ -55,7 +55,48 @@
                 </div>
             </div>
         </div>
+    </div> -->
+
+    <div id="wrapper">
+
+    <!-- Navigation -->
+
+    <div id="page-wrapper">
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <h2>Book</h2>
+                {!! Form::open(['method' => 'POST']) !!}
+                <div class="form-group">
+                    {{Form::label('title','ISBN')}}
+                    {{Form::number('title','',['class'=>'form-control','placeholder'=>'Add ISBN'])}}
+                </div>
+                <div class="form-group">
+                    {{Form::label('title','Title')}}
+                    {{Form::text('title','',['class'=>'form-control','placeholder'=>'Title'])}}
+                </div>
+                <div class="form-group">
+                    {{Form::label('title', 'Author')}}
+                    {{ Form::text('title', '', ['class' =>'form-control', 'placeholder' => 'Add Author']) }}
+                </div>
+                <div class="form-group">
+                    {{Form::label('title', 'Price')}}
+                    {{Form::number('title', '', ['class' =>'form-control', 'placeholder' => 'Add Price']) }}
+                </div>
+                <div class="form-group dropdown">
+                    {!! Form::label('select', 'Category', ['class' => ' control-label'] )  !!}<br>
+                    {!!  Form::select('select', ['DG' => 'Degree', 'MCA' => 'MCA'], null,['class' => 'form-control dropdown' , 'placeholder' => 'Add Category', 'disablePlaceholder' => true]) !!}
+
+                </div>
+                <p></p>
+                {{Form::submit('Submit', ['class' =>'btn btn-primary'])}}
+
+                {!! Form::close() !!}
+            </div>
+        </div>
     </div>
+</div>
+
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>

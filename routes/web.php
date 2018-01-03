@@ -11,23 +11,18 @@
 |
 */
 
-Route::get('/user', function () {
-    return view('pages.user.index_user');
-});
-
-Route::get('/admin', function () {
-    return view('pages.admin.index_admin');
-});
-
+Route::get('/user','PagesController@user');
+Route::get('/admin','PagesController@admin');
+Route::get('/login','PagesController@login');
+Route::get('/','PagesController@login');
+Route::resource('members','MembersController');
 Route::get('/addbooks',function(){
     return view('pages.admin.addbooks');
 });
-
-Route::get('/login', function () {
-    return view('pages.login');
+Route::get('/addmem', function()	 {
+	return view('pages.admin.addmembers');
 });
 Route::get('/forms', function () {
     return view('pages.forms');
 });
-//D:\xampp\htdocs\Library\resources\views\pages\admin\addmembers.blade.php
-Route::get('/addmem', 'MembersController@create');
+

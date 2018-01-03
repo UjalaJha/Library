@@ -39,9 +39,7 @@
 <body>
 @include('inc.nav_admin')
 <div id="wrapper">
-
     <!-- Navigation -->
-
     <div id="page-wrapper">
         <!-- /.row -->
         <div class="row">
@@ -54,11 +52,12 @@
                 </div>
                 <div class="form-group">
                     {{Form::label('title', 'Member ID')}}
-                    {{ Form::text('title', '', ['class' =>'form-control', 'placeholder' => 'Add ID']) }}
+                    {{ Form::number('value', '', ['class' =>'form-control', 'placeholder' => 'Add ID']) }}
                 </div>
                 <div class="form-group">
-                    {{Form::label('title', '')}}
-                    {{ Form::text('title', '', ['class' =>'form-control', 'placeholder' => 'Add ID']) }}
+                    {{Form::label('title', 'SEX')}}<br>
+                    {{ Form::radio('sex', 'male') }} {{Form::label('title', 'male')}}<br>
+                    {{ Form::radio('sex', 'female') }} {{Form::label('title', 'female')}}
                 </div>
                 <div class="form-group dropdown">
                     {!! Form::label('select', 'Category', ['class' => ' control-label'] )  !!}<br>

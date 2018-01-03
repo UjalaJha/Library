@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Member;
 
 class MembersController extends Controller
 {
@@ -23,7 +24,7 @@ class MembersController extends Controller
      */
     public function create()
     {
-        return view('pages.admin.addmembers');
+        //
     }
 
     /**
@@ -34,7 +35,7 @@ class MembersController extends Controller
      */
     public function store(Request $request)
     {
-        return true;
+        //
     }
 
     /**
