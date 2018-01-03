@@ -38,20 +38,33 @@
 
 <body>
     @include('inc.nav_admin')
-    <div class="wrapper">
-        <div class="page-wrapper">
+    <div id="wrapper">
+        <div id="page-wrapper">
             <div class="row">
-                <div class="col-md-3 col-md-6">
-                    {!! Form::open(['method'=>'POST']) !!}
-                    <div class="form-group push-to-right" style="right:5px">
-                        {{Form::label('title','Title')}}
-                        {{Form::text('title','',['class'=>'form-control','placeholder'=>'Title'])}}
-                        {{Form::label('author','Author')}}
-                        {{Form::text('author','',['class'=>'form-control','placeholder'=>'Author'])}}
-                        {{Form::label('price','Price')}}
-                        {{Form::text('price','',['class'=>'form-control','placeholder'=>'Price'])}}
+                <div class="col-lg-12">
+                    <h1 class="page-header">Add Books</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <div class="row">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>Book Details</h4>
                     </div>
-                    {!! Form::close() !!}
+                    <div class="panel-body">
+                        <div class="col-md-6">
+                            {!! Form::open(['method'=>'POST']) !!}
+                            <div class="form-group">
+                                {{Form::label('title','Title')}}
+                                {{Form::text('title','',['class'=>'form-control','placeholder'=>'Title'])}}
+                                {{Form::label('author','Author')}}
+                                {{Form::text('author','',['class'=>'form-control','placeholder'=>'Author'])}}
+                                {{Form::label('price','Price')}}
+                                {{Form::text('price','',['class'=>'form-control','placeholder'=>'Price'])}}
+                            </div>
+                            {!! Form::close() !!}
+                        </div>
+                    <div>
                 </div>
             </div>
         </div>

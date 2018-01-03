@@ -45,32 +45,48 @@
     <div id="page-wrapper">
         <!-- /.row -->
         <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <h2>Member</h2>
-                {!! Form::open(['method' => 'POST']) !!}
-                <div class="form-group">
-                    {{Form::label('title', 'Member Name')}}
-                    {{ Form::text('title', '', ['class' =>'form-control', 'placeholder' => 'Add name']) }}
+            <div class="col-lg-12">
+                <h1 class="page-header">Add Member</h1>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+               <h4>Member Details</h4>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <h2>Member</h2>
+                        {!! Form::open(['method' => 'POST']) !!}
+                        <div class="form-group">
+                            {{Form::label('title', 'Member Name')}}
+                            {{ Form::text('title', '', ['class' =>'form-control', 'placeholder' => 'Add name']) }}
+                        </div>
+                        <div class="form-group">
+                            {{Form::label('title', 'Member ID')}}
+                            {{ Form::text('title', '', ['class' =>'form-control', 'placeholder' => 'Add ID']) }}
+                        </div>
+                        <div class="form-group">
+                            {{Form::label('title', '')}}
+                            {{ Form::text('title', '', ['class' =>'form-control', 'placeholder' => 'Add ID']) }}
+                        </div>
+                        <div class="form-group dropdown">
+                            {!! Form::label('select', 'Category', ['class' => ' control-label'] )  !!}<br>
+                            {!! Form::select('select', ['DG' => 'Degree', 'MCA' => 'MCA'],  'S', ['class' => 'form-control dropdown' ]) !!}
+                        </div>   
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        {{--  Elemets inserted in this block will be in rightside of the panel  --}}
+                    </div>
                 </div>
-                <div class="form-group">
-                    {{Form::label('title', 'Member ID')}}
-                    {{ Form::text('title', '', ['class' =>'form-control', 'placeholder' => 'Add ID']) }}
-                </div>
-                <div class="form-group">
-                    {{Form::label('title', '')}}
-                    {{ Form::text('title', '', ['class' =>'form-control', 'placeholder' => 'Add ID']) }}
-                </div>
-                <div class="form-group dropdown">
-                    {!! Form::label('select', 'Category', ['class' => ' control-label'] )  !!}<br>
-                    {!!  Form::select('select', ['DG' => 'Degree', 'MCA' => 'MCA'],  'S', ['class' => 'form-control dropdown' ]) !!}
-
-                </div>
-                <p></p>
+            <div class="text-center">
                 {{Form::submit('Submit', ['class' =>'btn btn-primary'])}}
-
+                
                 {!! Form::close() !!}
             </div>
         </div>
+        
     </div>
 </div>
 
