@@ -6,5 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Member extends Model
 {
-    protected $primaryKey = 'memid';
+    // protected $primaryKey = 'memid';
+
+	public $timestamps = false;
 }

@@ -67,10 +67,10 @@
                             <a href="#"><i class="fa fa-group"></i>Membership<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="flot.html">Browse Members</a>
+                                    <a href="/members">Browse Members</a>
                                 </li>
                                 <li>
-                                    <a href="morris.html">Add/delete Member</a>
+                                    <a href="/members/create">Add/delete Member</a>
                                 </li>
                                 <li>
                                     <a href="morris.html">Member Card Generator</a>

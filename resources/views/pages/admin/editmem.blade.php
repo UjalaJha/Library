@@ -1,24 +1,23 @@
 @extends('pages.admin.adminlayout')
 @section('content')
 
-    <!-- /.col-lg-12 -->
 <div class="row">
     <div class="col-lg-12">
-        <h1>Member</h1>
+        <h1 class="page-header">Edit Member</h1>
     </div>
+<!-- /.col-lg-12 -->
 </div>
-
     <!-- /.row -->
 <div class="row">
    <div class="col-lg-3 col-md-6">
-                {!! Form::open(['action' => 'MembersController@store','method'=>'POST']) !!}
+                {!! Form::open(['action' => ['MembersController@update', $member->id],'method'=>'Member']) !!}
                 <div class="form-group">
                     {{Form::label('name', 'Member Name')}}
-                    {{ Form::text('name', '', ['class' =>'form-control', 'placeholder' => 'Add name']) }}
+                    {{ Form::text('name', $member->name, ['class' =>'form-control', 'placeholder' => 'Add name']) }}
                 </div>
                 <div class="form-group">
                     {{Form::label('id', 'Member ID')}}
-                    {{ Form::number('id', '', ['class' =>'form-control', 'placeholder' => 'Add ID']) }}
+                    {{ Form::number('id', $member->memid, ['class' =>'form-control', 'placeholder' => 'Add ID']) }}
                 </div>
                 <div class="form-group">
                     {{Form::label('sex', 'SEX')}}<br>
@@ -31,6 +30,7 @@
 
                 </div>
                 <p></p>
+                {{Form::hidden('_method','PUT')}}
                 {{Form::submit('Submit', ['class' =>'btn btn-primary'])}}
 
                 {!! Form::close() !!}

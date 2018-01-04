@@ -16,6 +16,7 @@ Route::get('/admin','PagesController@admin');
 Route::get('/login','PagesController@login');
 Route::get('/','PagesController@login');
 Route::resource('members','MembersController');
+
 Route::get('/addbooks',function(){
     return view('pages.admin.addbooks');
 });
@@ -25,4 +26,6 @@ Route::get('/addmem', function()	 {
 Route::get('/forms', function () {
     return view('pages.forms');
 });
-
+Route::get('/showmem',function(){
+    return view('pages.admin.showmem');
+});

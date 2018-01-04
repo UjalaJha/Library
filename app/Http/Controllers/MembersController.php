@@ -14,8 +14,12 @@ class MembersController extends Controller
      */
     public function index()
     {
-        //
+
+        $member = member::orderby('memid','asc')->paginate(4);
+        return view('pages.admin.viewmem')->with('member',$member);
     }
+
+    
 
     /**
      * Show the form for creating a new resource.
@@ -24,7 +28,7 @@ class MembersController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.admin.addmembers');
     }
 
     /**
@@ -35,7 +39,20 @@ class MembersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate( $request, [
+            'id' => 'required',
+            'name' =>'required'
+        ]);
+
+        $member=new member;
+        $member->name=$request->input('name');
+        $member->memid=$request->input('id');
+        $member->sex=$request->input('sex');
+        $member->category=$request->input('select');
+        $member->save();
+        return redirect('/members')->with('success','Member Added');
+        
+
     }
 
     /**
@@ -46,7 +63,9 @@ class MembersController extends Controller
      */
     public function show($id)
     {
-        //
+        // return "ff";
+        $member = member::find($id);
+        return view('pages.admin.showmem')->with('member',$member);
     }
 
     /**
@@ -57,7 +76,8 @@ class MembersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $member = member::find($id);
+        return view('pages.admin.editmem')->with('member',$member);
     }
 
     /**
@@ -69,7 +89,17 @@ class MembersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate( $request, [
+            'id' => 'required'
+        ]);
+
+        $member=member::find($id);
+        $member->name=$request->input('name');
+        $member->memid=$request->input('id');
+        $member->sex=$request->input('sex');
+        $member->category=$request->input('select');
+        $member->save();
+        return redirect('/members')->with('success','Member Updated');
     }
 
     /**
@@ -80,6 +110,12 @@ class MembersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $member=member::find($id);
+        if ($member!= null)
+        {
+           $member->DELETE();
+           return redirect('/members')->with('success','Member Removed');
+        }
+        return redirect('/members')->with('success','Member Removed');
     }
 }
