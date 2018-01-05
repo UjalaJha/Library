@@ -1,16 +1,17 @@
-@extends('pages.admin.adminlayout')
+
+
+
+@extends('inc.adminlayout')
+
 @section('content')
 
-    <!-- /.col-lg-12 -->
 <div class="row">
-    <div class="col-lg-12">
-        <h1>Member</h1>
-    </div>
-</div>
-
-    <!-- /.row -->
-<div class="row">
-   <div class="col-lg-3 col-md-6">
+    <div class="container-fluid">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Add Member
+            </div>
+            <div class="panel-body">
                 {!! Form::open(['action' => 'MembersController@store','method'=>'POST']) !!}
                 <div class="form-group">
                     {{Form::label('name', 'Member Name')}}
@@ -27,15 +28,18 @@
                 </div>
                 <div class="form-group dropdown">
                     {!! Form::label('select', 'Category', ['class' => ' control-label'] )  !!}<br>
-                    {!!  Form::select('select', ['DG' => 'Degree', 'MCA' => 'MCA'],  'S', ['class' => 'form-control dropdown' ]) !!}
-
+                    {!!  Form::select('select', ['DG' => 'Degree', 'MCA' => 'MCA'],  'S',
+                     ['class' => 'form-control dropdown' ]) !!}
                 </div>
                 <p></p>
-                {{Form::submit('Submit', ['class' =>'btn btn-primary'])}}
-
-                {!! Form::close() !!}
-            </div>
+                
+            <div>
+        </div>
+    </div>
+    <div class="panel-footer text-center">
+        {!! Form::submit('Submit', ['class' =>'btn btn-primary']) !!}
+        {!! Form::close() !!}
+    </div>
 </div>
-
 
 @endsection

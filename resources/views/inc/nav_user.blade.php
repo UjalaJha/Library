@@ -6,7 +6,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><image img src="/img/logo.png" alt="Logo"  class="pull-left brand-font" height="25" width="30" >Library</a>
+                <a class="navbar-brand" href="/user"><image img src="/img/logo.png" alt="Logo"  class="pull-left brand-font" height="25" width="30" >Library</a>
                 </div>
             <!-- /.navbar-header -->
 
@@ -60,7 +60,7 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="/"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="/user"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-history"></i>Transaction Details<span class="fa arrow"></span></a>

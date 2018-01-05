@@ -1,41 +1,49 @@
-@extends('pages.admin.adminlayout')
+@extends('inc.adminlayout')
+
 @section('content')
     
-
-<div class="row">
-    <div class="col-lg-12">
-        <h1>Member</h1>
+<div class="panel panel-primary">
+    <div class="panel-heading" >
+        <div class="row">
+            <div class="col-lg-12">
+                Member List
+            </div>
+        <!-- /.col-lg-12 -->
+        </div>
     </div>
-<!-- /.col-lg-12 -->
-</div>
-    <!-- /.row -->
-<div class="row">
-    @if(count($member)>0)
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Member Name</th>
-                    <th>Member ID</th>
-                    <th>Details</th>
-                </tr>
-            </thead>
-            <tbody>
-                 @foreach($member as $mem)
-                <tr>
-                    <td>{!!$mem->name!!}</td>
-                    <td>{!!$mem->memid!!}</td>
-                    <td><a href ="/members/{{$mem->id}}" <button type="button" class="btn btn-info ">View Details</button></a></td>
-                </tr>
-                @endforeach
-                @else
-                    No member
-                @endif
 
-          </tbody>
-        </table> 
+    <div class="panel-body">
+    <!-- /.row -->
+        <div class="container-fluid">
+            <div class="row">
+                
+                <table class="table table-striped">
+                    @if(count($member)>0)
+                    <thead>
+                        <tr>
+                            <th>Member Name</th>
+                            <th>Member ID</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                         @foreach($member as $mem)
+                        <tr>
+                            <td>{!!$mem->name!!}</td>
+                            <td>{!!$mem->memid!!}</td>
+                            <td><a href ="/members/{{$mem->id}}" <button type="button" class="btn btn-outline btn-primary">View Details</button></a></td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                    @else
+                        No member
+                    @endif
+                </table> 
+            </div>
+        <div>
+    </div>
 </div>
 <div class="row text-center">
- {{$member->links()}}
+    {{$member->links()}}
 </div>
-
 @endsection

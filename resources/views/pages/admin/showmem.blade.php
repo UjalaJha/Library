@@ -1,29 +1,51 @@
-@extends('pages.admin.adminlayout')
-@section('content')
+@extends('inc.adminlayout')
 
+@section('content')
+<!-- 		
 <div class="row">
 	<div class="col-lg-12">
 		<h1>Member</h1>
-	</div>
+	</div> -->
 <!-- /.col-lg-12 -->
-</div>
+<!-- </div> -->
 	<!-- /.row -->
 <div class="row">
 	<div class="container-fluid">
-	  	<div class="well well-sm">
-			Member Name      - {{$member->name}}<br>
-			Member ID        - {{$member->memid}}<br>
-			Member Gender    - {{$member->sex}}<br>
-			Member Category  - {{$member->category}}<br>
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+            	Member Details
+         	</div>
+            <div class="panel-body">
+            	<table class="table table table-striped ">
+            		<tbody>
+            			<tr>
+            				<th>Member Name</th>
+            				<td>{{$member->name}}</td>
+            			</tr>
+            			<tr>
+            				<th>Member ID</th>
+            				<td>{{$member->memid}}</td>
+            			</tr>
+            			<tr>
+            				<th>Member Gender</th>
+            				<td>{{$member->sex}}</td>
+            			</tr>
+            			<tr>
+            				<th>Member Category</th>
+            				<td>{{$member->category}}</td>
+            			</tr>
+					</tbody>
+        		</table>  
+	  		</div>
+	  		<div class="panel-footer">
+                <a href="/members/{{$member->id}}/edit" class="btn btn-outline btn-primary">Edit</a>
+               	{!!Form::open(['action' => ['MembersController@destroy', $member->id], 'method' => 'POST', 'class' =>'pull-right'])!!}
+				{{Form::hidden('_method', 'DELETE')}}
+				{{Form::submit('Delete', ['class' => 'btn btn-outline btn-primary'])}}
+				{!!Form::close()!!}
+            </div>
 	  	</div>
 	</div>
 </div>
-
-<a href="/members/{{$member->id}}/edit" class="btn btn-warning">Edit</a>
-
-{!!Form::open(['action' => ['MembersController@destroy', $member->id], 'method' => 'POST', 'class' =>'pull-right'])!!}
-{{Form::hidden('_method', 'DELETE')}}
-{{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
-{!!Form::close()!!}
 
 @endsection

@@ -20,12 +20,18 @@ Route::resource('members','MembersController');
 Route::get('/addbooks',function(){
     return view('pages.admin.addbooks');
 });
-Route::get('/addmem', function()	 {
-	return view('pages.admin.addmembers');
-});
-Route::get('/forms', function () {
-    return view('pages.forms');
-});
-Route::get('/showmem',function(){
-    return view('pages.admin.showmem');
-});
+
+Route::get('/dummy','DummyController@blank');
+Route::get('/blank','DummyController@blank');
+Route::get('/flot','DummyController@flot');
+Route::get('/buttons','DummyController@buttons');
+Route::get('/forms','DummyController@forms');
+Route::get('/grid','DummyController@grid');
+Route::get('/icons','DummyController@icons');
+Route::get('/index','DummyController@index');
+Route::get('/loginsb','DummyController@loginsb');
+Route::get('/morris','DummyController@morris');
+Route::get('/notifications','DummyController@notifications');
+Route::get('/panelswells','DummyController@panelswells');
+Route::get('/tables','DummyController@tables');
+Route::get('/typography','DummyController@typography');

@@ -20,5 +20,16 @@ class PagesController extends Controller
     {
     return view('pages.login');
 	}
+    
+
+
+
+
+
+
+
+
+
+
 
 }
