@@ -16,7 +16,7 @@ Route::get('/admin','PagesController@admin');
 Route::get('/login','PagesController@login');
 Route::get('/','PagesController@login');
 Route::resource('members','MembersController');
-
+Route::resource('books','BooksController');
 Route::get('/addbooks',function(){
     return view('pages.admin.addbooks');
 });

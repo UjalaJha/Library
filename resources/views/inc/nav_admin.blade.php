@@ -70,7 +70,7 @@
                                     <a href="/members">Browse Members</a>
                                 </li>
                                 <li>
-                                    <a href="/members/create">Add/delete Member</a>
+                                    <a href="/members/create">Add Member</a>
                                 </li>
                                 <li>
                                     <a href="morris.html">Member Card Generator</a>
@@ -82,27 +82,13 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="tables.html"><i class="fa fa-book fa-fw"></i>Book Circulation<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="flot.html">Start Transaction</a>
-                                </li>
-                                <li>
-                                    <a href="morris.html">Generate Transaction History</a>
-                                </li>
-                                <li>
-                                    <a href="morris.html">Generate Overdue List</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
                             <a href="forms.html"><i class="fa fa-file fa-fw"></i>Book Details<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="flot.html">Browse Books</a>
+                                    <a href="/books">Browse Books</a>
                                 </li>
                                 <li>
-                                    <a href="morris.html">Add/Delete Books</a>
+                                    <a href="/books/create">Add Books</a>
                                 </li>
 
                                 <li>
@@ -119,6 +105,20 @@
                                     <a href="morris.html">Generate Labels</a>
                                 </li>
                                 
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="tables.html"><i class="fa fa-book fa-fw"></i>Book Circulation<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="flot.html">Start Transaction</a>
+                                </li>
+                                <li>
+                                    <a href="morris.html">Generate Transaction History</a>
+                                </li>
+                                <li>
+                                    <a href="morris.html">Generate Overdue List</a>
+                                </li>
                             </ul>
                         </li>
                         <li>

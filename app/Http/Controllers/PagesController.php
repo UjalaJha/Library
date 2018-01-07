@@ -13,7 +13,7 @@ class PagesController extends Controller
 
 	public function admin()
     {
-    return view('pages.admin.index_admin');
+    return view('pages.admin.Index_admin');
 	}
 
 	public function login()

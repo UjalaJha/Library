@@ -10,7 +10,7 @@
                 Edit Member
             </div>
             <div class="panel-body">
-                {!! Form::open(['action' => ['MembersController@update', $member->id],'method'=>'Member']) !!}
+                {!! Form::open(['action' => ['MembersController@update', $member->id],'method'=>'POST']) !!}
                 <div class="form-group">
                     {{Form::label('name', 'Member Name')}}
                     {{ Form::text('name', $member->name, ['class' =>'form-control', 'placeholder' => 'Add name']) }}
