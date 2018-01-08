@@ -16,9 +16,9 @@ class PagesController extends Controller
     return view('pages.admin.Index_admin');
 	}
 
-	public function login()
+	public function customlogin()
     {
-    return view('pages.login');
+    return view('pages.customlogin');
 	}
     
 

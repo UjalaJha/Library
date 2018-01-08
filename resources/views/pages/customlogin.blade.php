@@ -41,13 +41,62 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-   
-
+      
 </head>
 
 <body>
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="padding-right: 30px ; height: 60px" >
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/admin"><image img src="/img/logo.png" alt="Logo"  class="pull-left brand-font" height="25" width="30" >Library</a>
+            </div>
+            <!-- /.navbar-header -->
 
-    <div class="template-single-blog">
+            <ul class="nav navbar-nav">
+                &nbsp;
+            </ul>
+
+            <!-- Right Side Of Navbar -->
+            <ul class="nav navbar-nav navbar-right">
+                <!-- Authentication Links -->
+                @if (Auth::guest())
+                    <li><a href="{{ route('login') }}"  >Login</a></li>
+                    <li><a href="{{ route('register') }}" >Register</a></li>
+
+                @else
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                        </a>
+
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                    Logout
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                @endif
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    @yield('content')
+
+<!-- <div class="template-single-blog">
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
                 <div class="login-panel panel panel-default">
@@ -68,7 +117,6 @@
                                 <div class="checkbox">
                                     <label><input name="remember" type="checkbox" value="Remember Me">Remember Me</label>
                                 </div>
-                                <!-- Change this to a button or input when using this as a form -->
                                 <a href="index.html" class="btn btn-lg btn-info btn-block"><i class="glyphicon glyphicon-ok"></i> Login</a>
                             </fieldset>
                         </form>
@@ -77,7 +125,7 @@
             </div>
     
         </div>
-    </div>
+    </div> -->
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
