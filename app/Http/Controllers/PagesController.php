@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
-    public function user()
+    public function libuser()
     {
-    return view('pages.user.index_user');
+    return view('pages.libuser.index_user');
 	}
 
 	public function admin()

@@ -11,16 +11,12 @@
 |
 */
 
-Route::get('/user','PagesController@user');
+Route::get('/libuser','PagesController@libuser');
 Route::get('/admin','PagesController@admin');
 Route::get('/login','PagesController@login');
 Route::get('/','PagesController@login');
 Route::resource('members','MembersController');
 Route::resource('books','BooksController');
-Route::get('/addbooks',function(){
-    return view('pages.admin.addbooks');
-});
-
 Route::get('/dummy','DummyController@blank');
 Route::get('/blank','DummyController@blank');
 Route::get('/flot','DummyController@flot');

@@ -20,7 +20,7 @@
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="/admin">Admin Page</a>
                         </li>
-                        <li><a href="/user">User Page</a>
+                        <li><a href="/libuser">User Page</a>
                         </li>
                         <li><a href="/login"></i>Login Page</a>
                         </li>
