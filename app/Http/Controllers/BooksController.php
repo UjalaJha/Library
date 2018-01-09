@@ -90,7 +90,7 @@ class BooksController extends Controller
             'title' =>'required'
         ]);
 
-        $book=book::find($id);
+        $book=new book;
         $book->ISBN=$request->input('ISBN');
         $book->title=$request->input('title');
         $book->author=$request->input('author');
