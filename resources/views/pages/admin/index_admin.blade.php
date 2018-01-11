@@ -1,5 +1,4 @@
 @extends('inc.adminlayout')
-
 @section('content')
     <!-- /.col-lg-12 -->
 <!-- <div class="row">
@@ -8,6 +7,21 @@
     </div>
 </div> -->
     <!-- /.row -->
+@if(Auth::guest())
+@section('content')
+<div class="container-fluid">
+<div class="alert alert-danger alert-dismissable" style="margin: 8px padding: 9px">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <p class="text-center">You are logged out!</p>
+</div>
+
+
+ <h1><p class="text-center">Please Login to visit the page </p></h1>
+</div>
+@endsection
+
+@else
+@section('content')
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-12">
@@ -96,3 +110,4 @@
     </div>
 </div>
 @endsection
+@endif

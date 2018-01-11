@@ -14,7 +14,7 @@
 Route::get('/libuser','PagesController@libuser');
 Route::get('/admin','PagesController@admin');
 Route::get('/customlogin','PagesController@customlogin');
-Route::get('/','PagesController@login');
+Route::get('/','PagesController@admin');
 Route::resource('members','MembersController');
 Route::resource('books','BooksController');
 Route::get('/dummy','DummyController@blank');

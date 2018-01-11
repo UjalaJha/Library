@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <style>
+    <!-- <style>
     body  
     {
         background-image: url("/img/background1.jpg");
@@ -12,7 +12,7 @@
     {
     background-color: lightblue;
     }
-    </style>
+    </style> -->
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,88 +44,11 @@
       
 </head>
 
+
 <body>
-    <nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="padding-right: 30px ; height: 60px" >
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/admin"><image img src="/img/logo.png" alt="Logo"  class="pull-left brand-font" height="25" width="30" >Library</a>
-            </div>
-            <!-- /.navbar-header -->
 
-            <ul class="nav navbar-nav">
-                &nbsp;
-            </ul>
-
-            <!-- Right Side Of Navbar -->
-            <ul class="nav navbar-nav navbar-right">
-                <!-- Authentication Links -->
-                @if (Auth::guest())
-                    <li><a href="{{ route('login') }}"  >Login</a></li>
-                    <li><a href="{{ route('register') }}" >Register</a></li>
-
-                @else
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            {{ Auth::user()->name }} <span class="caret"></span>
-                        </a>
-
-                        <ul class="dropdown-menu" role="menu">
-                            <li>
-                                <a href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();">
-                                    Logout
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    {{ csrf_field() }}
-                                </form>
-                            </li>
-                        </ul>
-                    </li>
-                @endif
-            </ul>
-        </div>
-    </div>
-</nav>
-
+    @include('inc.nav_admin')
     @yield('content')
-
-<!-- <div class="template-single-blog">
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4">
-                <div class="login-panel panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"><label><i class="glyphicon glyphicon-user"></i> Sign In</label></h3>
-                    </div>
-                    <div class="panel-body">
-                        <form role="form">
-                            <fieldset>
-                                <div class="form-group">
-                                    <label><i class="glyphicon glyphicon-envelope"></i> Email address</label>
-                                    <input class="form-control" placeholder="Enter E-mail" name="email" type="email" autofocus>
-                                </div>
-                                <div class="form-group">
-                                    <label><i class="glyphicon glyphicon-lock"></i> Password</label>
-                                    <input class="form-control" placeholder="Enter Password" name="password" type="password" value="">
-                                </div>
-                                <div class="checkbox">
-                                    <label><input name="remember" type="checkbox" value="Remember Me">Remember Me</label>
-                                </div>
-                                <a href="index.html" class="btn btn-lg btn-info btn-block"><i class="glyphicon glyphicon-ok"></i> Login</a>
-                            </fieldset>
-                        </form>
-                    </div>
-                </div>
-            </div>
-    
-        </div>
-    </div> -->
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>

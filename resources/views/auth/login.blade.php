@@ -1,7 +1,5 @@
 @extends('pages.customlogin')
-
 @section('content')
-
 
 <div class="container">
     <div class="template-single-blog">
