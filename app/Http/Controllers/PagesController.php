@@ -13,6 +13,7 @@ class PagesController extends Controller
      */
     public function __construct()
     {
+        $this->middleware('prevent-back-history');
         $this->middleware('auth');
     }
     public function libuser()
