@@ -6,6 +6,16 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
+     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('prevent-back-history');
+        $this->middleware('auth');
+    }
     public function libuser()
     {
     return view('pages.libuser.index_user');
@@ -16,9 +26,9 @@ class PagesController extends Controller
     return view('pages.admin.Index_admin');
 	}
 
-	public function login()
+	public function customlogin()
     {
-    return view('pages.login');
+    return view('pages.customlogin');
 	}
     
 

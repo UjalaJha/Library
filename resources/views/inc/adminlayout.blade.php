@@ -41,12 +41,15 @@
     <div id="wrapper">
 
         <!-- Navigation -->
-            
+        @if(Auth::guest())
+        @yield('content')
+        @else
         <div id="page-wrapper">
             <br>
             @include('inc.messages')
             @yield('content')
         </div>
+        @endif
 
     </div>
     <!-- /#wrapper -->

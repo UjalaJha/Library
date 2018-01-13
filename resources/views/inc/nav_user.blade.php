@@ -21,7 +21,7 @@
                         </li>
                         <li><a href="/libuser">User Page</a>
                         </li>
-                        <li><a href="/login"></i>Login Page</a>
+                        <li><a href="/customlogin"></i>Login Page</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->

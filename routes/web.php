@@ -13,8 +13,8 @@
 
 Route::get('/libuser','PagesController@libuser');
 Route::get('/admin','PagesController@admin');
-Route::get('/login','PagesController@login');
-Route::get('/','PagesController@login');
+Route::get('/customlogin','PagesController@customlogin');
+Route::get('/','PagesController@admin');
 Route::resource('members','MembersController');
 Route::resource('books','BooksController');
 Route::get('/dummy','DummyController@blank');
@@ -31,3 +31,6 @@ Route::get('/notifications','DummyController@notifications');
 Route::get('/panelswells','DummyController@panelswells');
 Route::get('/tables','DummyController@tables');
 Route::get('/typography','DummyController@typography');
+Auth::routes();
+
+Route::get('/admin', 'DashboardController@index');
